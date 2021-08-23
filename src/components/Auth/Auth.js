@@ -27,6 +27,14 @@ const Auth = () => {
         handleShowPassword(false)
     }
 
+    const googleSuccess = (res) => {
+        console.log(res)
+    }
+
+    const googleFailure = () => {
+        console.log('failed')
+    }
+
     return (
         <Container component='main' maxWidth="xs">
             <Paper className={classes.paper} elevation={3}>
@@ -59,14 +67,18 @@ const Auth = () => {
                         <Input name='password' label='Password' handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
                         {isSignup && <Input name='confirmPassword' label='Repeat Password' handleChange={handleChange} type="password" />}
                     </Grid>
+                    <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
+                        {isSignup ? 'Sign Up' : 'Sign In'}
+                    </Button>
                     <GoogleLogin
-                        clientId="Google ID"
+                        clientId="1010574218292-k1ibm1aphggvbfb79ch208ne4n8liapo.apps.googleusercontent.com"
                         render={(renderProps) => (
                             <Button
                                 className={classes.googleButton}
                                 color="primary"
                                 fullWidth
-                                onclick={renderProps.disabled}
+                                disabled={renderProps.disabled}
+                                onClick={renderProps.onClick}
                                 startIcon={<Icon />}
                                 variant="contained"
                             >
@@ -75,11 +87,8 @@ const Auth = () => {
                         )}
                         onSuccess={googleSuccess}
                         onFailure={googleFailure}
-                        cookiePolicy="single-host-origin"
+                        cookiePolicy="single_host_origin"
                     />
-                    <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
-                        {isSignup ? 'Sign Up' : 'Sign In'}
-                    </Button>
                     <Grid container justifyContent="flex-end">
                         <Grid item >
                             <Button onClick={switchMode}>
