@@ -39,7 +39,7 @@ const Auth = () => {
 
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
-        handleShowPassword(false)
+        setShowPassword(false)
     }
 
     const googleSuccess = async (res) => {
@@ -81,7 +81,7 @@ const Auth = () => {
                                 />
                                 <Input
                                     name="lastName"
-                                    label="First Name"
+                                    label="Last Name"
                                     handleChange={handleChange}
                                     half
                                 />
