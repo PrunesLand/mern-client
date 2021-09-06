@@ -24,8 +24,9 @@ function App() {
         <Container>
           <Navbar />
           <Switch>
-            <Route path='/' exact component={LandingPage} />
-            <Route path='/auth' exact component={Auth} />
+            <Route path='/landing' component={LandingPage} />
+            <Route path='/' exact component={Home} />
+            <Route path='/auth' component={Auth} />
           </Switch>
         </Container>
       </BrowserRouter>

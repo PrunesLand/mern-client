@@ -14,14 +14,21 @@ export default makeStyles((theme) => ({
     heading: {
         color: 'rgba(0,183,255, 1)',
         textDecoration: 'none',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: theme.typography.h4.fontSize
+        }
+
     },
     image: {
-        marginLeft: '15px',
+        textAlign: 'center'
     },
     toolbar: {
         display: 'flex',
         justifyContent: 'flex-end',
         width: '400px',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     },
     profile: {
         display: 'flex',
@@ -34,7 +41,10 @@ export default makeStyles((theme) => ({
     },
     brandContainer: {
         display: 'flex',
-        alignItems: 'center',
+        justifyContent: 'center',
+        alignContent: 'center'
+
+
     },
     purple: {
         color: theme.palette.getContrastText(deepPurple[500]),

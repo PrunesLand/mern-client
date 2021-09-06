@@ -14,9 +14,9 @@ const LandingPage = () => {
             <Grid container spacing={1} className={classes.container}>
                 <Grid item xs={12}>
                     <Paper className={classes.lrgBox} square>
-                        <Typography variant="h1" className={classes.heroTextLrg}> Outstagram</Typography>
+                        <Typography variant="h1" className={classes.heroTextLrg}> Share your stories</Typography>
                         <Typography variant='h6' className={classes.heroTextMd}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque cum dolore! Cupiditate fuga numquam quisquam ad odit ea nostrum placeat suscipit molestias.</Typography>
-                        <Button variant='outlined'> <Typography variant="h6">Get Started</Typography></Button>
+                        <Button variant='outlined'> <Typography variant="h6" className={classes.mdText}>Get Started</Typography></Button>
                     </Paper>
                 </Grid>
                 <Grid item xs={6} >
