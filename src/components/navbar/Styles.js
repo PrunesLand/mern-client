@@ -3,17 +3,20 @@ import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
     appBar: {
-        // borderRadius: 15,
-        // margin: '30px 0',
         display: 'flex',
-        flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px 50px',
+        [theme.breakpoints.up('sm')]: {
+
+            flexDirection: 'row',
+        }
+
     },
     heading: {
-        color: 'rgba(0,183,255, 1)',
+        color: theme.palette.primary.main,
         textDecoration: 'none',
+        textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
             fontSize: theme.typography.h4.fontSize
         }
@@ -22,32 +25,38 @@ export default makeStyles((theme) => ({
     image: {
         textAlign: 'center'
     },
-    toolbar: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        width: '400px',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none'
-        }
-    },
+    toolbar: theme.mixins.toolbar,
     profile: {
         display: 'flex',
         justifyContent: 'space-between',
-        width: '400px',
+        width: theme.spacing(40),
+
     },
     userName: {
         display: 'flex',
         alignItems: 'center',
+        fontSize: theme.spacing(2.5),
+        textTransform: 'capitalize',
+        color: theme.palette.primary.main
     },
     brandContainer: {
         display: 'flex',
         justifyContent: 'center',
-        alignContent: 'center'
-
+        alignContent: 'center',
+        textAlign: 'center'
 
     },
     purple: {
         color: theme.palette.getContrastText(deepPurple[500]),
         backgroundColor: deepPurple[500],
+        height: theme.spacing(3),
+        width: theme.spacing(3),
+
     },
+    signin: {
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: 'block'
+        }
+    }
 }));

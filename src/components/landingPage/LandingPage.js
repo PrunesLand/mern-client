@@ -5,6 +5,7 @@ import { GiThreeFriends } from 'react-icons/gi'
 import { BsBellFill } from 'react-icons/bs'
 import discussion from '../../images/online_discussion.svg'
 import { FaTwitter, FaInstagram, FaFacebookSquare } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 const LandingPage = () => {
 
     const classes = styles()
@@ -16,18 +17,18 @@ const LandingPage = () => {
                     <Paper className={classes.lrgBox} square>
                         <Typography variant="h1" className={classes.heroTextLrg}> Share your stories</Typography>
                         <Typography variant='h6' className={classes.heroTextMd}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque cum dolore! Cupiditate fuga numquam quisquam ad odit ea nostrum placeat suscipit molestias.</Typography>
-                        <Button variant='outlined'> <Typography variant="h6" className={classes.mdText}>Get Started</Typography></Button>
+                        <Button variant='outlined' component={Link} to='/'> <Typography variant="h6" className={classes.mdText}>Get Started</Typography></Button>
                     </Paper>
                 </Grid>
                 <Grid item xs={6} >
                     <Paper className={classes.medBox} square>
-                        <Typography variant="h3" className={classes.mdText}><GiThreeFriends style={{ fontSize: '3rem', color: '#006ce5' }} /><br /> Connect With Friends Now!</Typography>
+                        <Typography variant="h3" className={classes.mdText}><GiThreeFriends style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Connect With Friends Now!</Typography>
 
                     </Paper>
                 </Grid>
                 <Grid item xs={6} >
                     <Paper className={classes.medBox} square>
-                        <Typography variant="h3" className={classes.mdText}><BsBellFill style={{ fontSize: '2.5rem', color: '#fdf052' }} /><br /> Turn on notifications now!</Typography>
+                        <Typography variant="h3" className={classes.mdText}><BsBellFill style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Turn on notifications now!</Typography>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} >

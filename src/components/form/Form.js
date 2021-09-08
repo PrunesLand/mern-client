@@ -4,6 +4,7 @@ import useStyles from './styles'
 import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
 import { createPost, updatePost } from '../../actions/posts';
+import { Link } from 'react-router-dom'
 
 const Form = ({ currentId, setCurrentId }) => {
     const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' })
@@ -32,9 +33,10 @@ const Form = ({ currentId, setCurrentId }) => {
     if (!user?.result?.name) {
         return (
             <Paper className={classes.paper}>
-                <Typography variant='h6' align='center'>
+                <Typography variant='h6' align='center' className={classes.signinText}>
                     Please sign in.
                 </Typography>
+                <Button component={Link} to='/auth' variant='contained' color='primary' className={classes.signin}>Sign in</Button>
             </Paper>
         )
     }
@@ -45,16 +47,18 @@ const Form = ({ currentId, setCurrentId }) => {
     }
 
     return (
+
         <Paper
             className={classes.paper}
         >
+
             <form
                 autoComplete="off"
                 noValidate
                 className={`${classes.root} ${classes.form}`}
                 onSubmit={handleSubmit}
             >
-                <Typography variant='h6'>{currentId ? 'Editing' : 'Creating'} a post</Typography>
+                <Typography variant='h6' color='secondary'>{currentId ? 'Editing' : 'Creating'} a post</Typography>
                 <TextField
                     name='title'
                     variant='outlined'
@@ -89,10 +93,11 @@ const Form = ({ currentId, setCurrentId }) => {
                     />
 
                 </div>
-                <Button className={classes.buttonSubmit} variant='contained' color='primary' size='large' type='submit' fullWidth>Submit</Button>
+                <Button className={classes.buttonSubmit} variant='contained' color='primary' size='large' type='submit' fullWidth>  Submit</Button>
                 <Button className={classes.buttonSubmit} variant='contained' color='secondary' size='small' onClick={clear} fullWidth>Clear</Button>
             </form>
         </Paper>
+
     )
 }
 
