@@ -10,5 +10,6 @@ export default makeStyles((theme) => ({
     },
     actionDiv: {
         textAlign: 'center',
+        color: theme.palette.secondary.main
     },
 }));

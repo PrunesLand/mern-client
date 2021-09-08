@@ -8,6 +8,9 @@ export default makeStyles((theme) => ({
     },
     paper: {
         padding: theme.spacing(2),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     form: {
         display: 'flex',
@@ -20,5 +23,15 @@ export default makeStyles((theme) => ({
     },
     buttonSubmit: {
         marginBottom: 10,
+        color: '#fff'
     },
+    signin: {
+        textAlign: 'center',
+        color: '#fff'
+
+    },
+    signinText: {
+        padding: theme.spacing(1),
+        color: theme.palette.secondary.main
+    }
 }));

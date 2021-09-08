@@ -31,7 +31,7 @@ const Post = ({ post, setCurrentId }) => {
         <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
             <div className={classes.overlay}>
-                <Typography variant='h6'>{post.name}</Typography>
+                <Typography variant='h6' color='primary'>{post.name}</Typography>
                 <Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
             </div>
             {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
@@ -42,11 +42,11 @@ const Post = ({ post, setCurrentId }) => {
                 </div>
             )}
             <div className={classes.details}>
-                <Typography variant='body2' color='textSecondary'>{post.tags.map((tag) => `#${tag} `)}</Typography>
+                <Typography variant='body2' color='Secondary'>{post.tags.map((tag) => `#${tag} `)}</Typography>
             </div>
-            <Typography className={classes.title} variant="body2" color="textSecondary" component="p">{post.title}</Typography>
+            <Typography className={classes.title} variant="body2" color="Secondary" component="p">{post.title}</Typography>
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+                <Typography variant="body2" color="Secondary" component="p">{post.message}</Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}>
