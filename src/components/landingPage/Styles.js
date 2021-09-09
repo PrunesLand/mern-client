@@ -4,24 +4,28 @@ export const styles = makeStyles((theme) => {
     return {
         root: {
             boxSizing: 'border-box',
-            paddingTop: theme.spacing(7),
+            paddingTop: '8vh',
             display: 'flex',
             justifyContent: 'center',
+            [theme.breakpoints.up('sm')]: {
+                paddingTop: '6vw'
+            }
         },
         container: {
             paddingTop: theme.spacing(1),
-            maxWidth: '90vh',
+            maxWidth: '75vh',
 
         },
         lrgBox: {
             fontFamily: 'Poppins',
-            padding: theme.spacing(2),
+            padding: theme.spacing(3),
             color: theme.palette.secondary.main,
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+
         },
         heroTextLrg: {
             padding: theme.spacing(1),
@@ -34,12 +38,12 @@ export const styles = makeStyles((theme) => {
             [theme.breakpoints.down('sm')]: {
                 fontSize: theme.typography.body2.fontSize,
                 padding: theme.spacing(2),
-            }
+            },
+            padding: theme.spacing(2),
 
         },
         medBox: {
             padding: theme.spacing(2),
-            height: theme.spacing(12),
             color: theme.palette.secondary.main
         },
         mdText: {
@@ -53,13 +57,16 @@ export const styles = makeStyles((theme) => {
             padding: theme.spacing(2),
             [theme.breakpoints.down('sm')]: {
                 width: theme.spacing(20),
-            }
+            },
+            maxHeight: theme.spacing(25)
         },
         socials: {
             display: 'flex',
             alignContent: 'center',
             justifyContent: 'center',
-            padding: theme.spacing(0.5)
+            padding: theme.spacing(0.5),
+
+
         },
     }
 })

@@ -11,7 +11,10 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
 
             flexDirection: 'row',
-        }
+            height: '6vw'
+        },
+        height: '8vh'
+
 
     },
     heading: {
@@ -63,10 +66,19 @@ export default makeStyles((theme) => ({
     signin: {
         display: 'none',
         [theme.breakpoints.up('sm')]: {
-            display: 'block'
-        }
+            display: 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+            height: theme.spacing(5)
+        },
+
     },
     logout: {
 
+    },
+    wrapper: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 }));
