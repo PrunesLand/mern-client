@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { AppBar, Avatar, Button, Typography } from '@material-ui/core'
+import { AppBar, Button, Typography } from '@material-ui/core'
 import useStyles from './Styles'
 
 import { Link, useHistory, useLocation } from 'react-router-dom'
@@ -41,7 +41,7 @@ const Navbar = () => {
         >
             {user ? (
                 <div className={classes.profile}>
-                    {/* <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar> */}
+
                     <Typography className={classes.userName} variant='h6'>{user.result.name}</Typography>
                     <Button variant='contained' className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
                 </div>
@@ -54,8 +54,10 @@ const Navbar = () => {
                         component={Link}
                         to='/'
                     >Outstagram</Typography>
+                    <div className={classes.wrapper}>
+                        <Button component={Link} to="/auth" variant="contained" color="primary" className={classes.signin}>Sign In</Button>
 
-                    <Button component={Link} to="/auth" variant="contained" color="primary" className={classes.signin}>Sign In</Button>
+                    </div>
 
                 </div>
 

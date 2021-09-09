@@ -27,4 +27,10 @@ export default makeStyles((theme) => ({
     googleButton: {
         marginBottom: theme.spacing(2),
     },
+    toolbar: {
+        height: '8vh',
+        [theme.breakpoints.up('sm')]: {
+            height: '3vw'
+        }
+    }
 }));

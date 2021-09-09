@@ -22,13 +22,13 @@ const LandingPage = () => {
                 </Grid>
                 <Grid item xs={6} >
                     <Paper className={classes.medBox} square>
-                        <Typography variant="h3" className={classes.mdText}><GiThreeFriends style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Connect With Friends Now!</Typography>
+                        <Typography variant="h6" className={classes.mdText}><GiThreeFriends style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Connect With Friends Now!</Typography>
 
                     </Paper>
                 </Grid>
                 <Grid item xs={6} >
                     <Paper className={classes.medBox} square>
-                        <Typography variant="h3" className={classes.mdText}><BsBellFill style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Turn on notifications now!</Typography>
+                        <Typography variant="h6" className={classes.mdText}><BsBellFill style={{ fontSize: '3rem', color: '#00bfa6', padding: '3px 0' }} /><br /> Turn on notifications now!</Typography>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} >

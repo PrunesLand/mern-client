@@ -61,7 +61,7 @@ const Auth = () => {
 
     return (
         <Container component='main' maxWidth="xs">
-            <div style={{ height: '0.5rem' }}></div>
+            <div className={classes.toolbar}></div>
             <Paper className={classes.paper} elevation={3}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
