@@ -37,8 +37,8 @@ function App() {
 
         <Navbar />
         <Switch>
-          <Route path='/landing' component={LandingPage} />
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={LandingPage} />
+          <Route path='/home' component={Home} />
           <Route path='/auth' component={Auth} />
         </Switch>
 

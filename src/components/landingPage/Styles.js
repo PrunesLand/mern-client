@@ -10,7 +10,7 @@ export const styles = makeStyles((theme) => {
         },
         container: {
             paddingTop: theme.spacing(1),
-            maxWidth: '60vh',
+            maxWidth: '90vh',
 
         },
         lrgBox: {
@@ -60,6 +60,6 @@ export const styles = makeStyles((theme) => {
             alignContent: 'center',
             justifyContent: 'center',
             padding: theme.spacing(0.5)
-        }
+        },
     }
 })

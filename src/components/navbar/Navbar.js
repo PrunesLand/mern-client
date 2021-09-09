@@ -52,9 +52,13 @@ const Navbar = () => {
                         align='center'
                         className={classes.heading}
                         component={Link}
-                        to='/landing'
+                        to='/'
                     >Outstagram</Typography>
+
+                    <Button component={Link} to="/auth" variant="contained" color="primary" className={classes.signin}>Sign In</Button>
+
                 </div>
+
             )}
         </AppBar>
     )
