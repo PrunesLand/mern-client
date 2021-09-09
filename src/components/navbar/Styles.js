@@ -4,6 +4,7 @@ import { deepPurple } from '@material-ui/core/colors';
 export default makeStyles((theme) => ({
     appBar: {
         display: 'flex',
+        width: '100%',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px 50px',
@@ -29,21 +30,27 @@ export default makeStyles((theme) => ({
     profile: {
         display: 'flex',
         justifyContent: 'space-between',
-        width: theme.spacing(40),
+        width: '100%'
+
 
     },
     userName: {
         display: 'flex',
         alignItems: 'center',
-        fontSize: theme.spacing(2.5),
+        fontSize: theme.typography.h5.fontSize,
         textTransform: 'capitalize',
         color: theme.palette.primary.main
     },
     brandContainer: {
         display: 'flex',
+        width: '100%',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignContent: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.up('sm')]: {
+            justifyContent: 'space-between'
+        }
 
     },
     purple: {
@@ -58,5 +65,8 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block'
         }
+    },
+    logout: {
+
     }
 }));
