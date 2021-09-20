@@ -95,7 +95,7 @@ const Auth = () => {
                     <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </Button>
-                    <GoogleLogin
+                    {/* <GoogleLogin
                         clientId={process.env.REACT_APP_.GOOGLE_KEY}
                         render={(renderProps) => (
                             <Button
@@ -113,7 +113,7 @@ const Auth = () => {
                         onSuccess={googleSuccess}
                         onFailure={googleFailure}
                         cookiePolicy="single_host_origin"
-                    />
+                    /> */}
                     <Grid container justifyContent="flex-end">
                         <Grid item >
                             <Button onClick={switchMode}>
