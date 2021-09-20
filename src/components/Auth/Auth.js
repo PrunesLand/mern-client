@@ -96,7 +96,7 @@ const Auth = () => {
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </Button>
                     <GoogleLogin
-                        clientId={process.env.REACT_APP_GOOGLE_KEY}
+                        clientId={process.env.REACT_APP_.GOOGLE_KEY}
                         render={(renderProps) => (
                             <Button
                                 className={classes.googleButton}
@@ -107,7 +107,7 @@ const Auth = () => {
                                 startIcon={<Icon />}
                                 variant="contained"
                             >
-                                Gogle Sign In
+                                Go0gle Sign In
                             </Button>
                         )}
                         onSuccess={googleSuccess}
